@@ -7,3 +7,12 @@
 
 ## 工具使用：  
 按照界面说明使用即可。
+
+## 源码使用
+### 入口文件  
+gui.py
+### 生成exe可执行文件  
+pyinstall -F gui.py -w -i icon.ico
+
+
+
