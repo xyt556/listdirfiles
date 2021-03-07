@@ -12,7 +12,7 @@
 ### 入口文件  
 gui.py
 ### 生成exe可执行文件  
-pyinstall -F gui.py -w -i icon.ico
+pyinstaller -F gui.py -w -i icon.ico
 
 
 
