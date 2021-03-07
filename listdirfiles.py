@@ -41,7 +41,7 @@ def get_all_files(path, suffix):
     return file_list
 
 
-def write_to_excel(content, filename):
+def write_to_excel(content, filename, path):
     if not isinstance(content, list):
         raise ValueError("参数类型不正确")
     wb = Workbook()
@@ -54,9 +54,16 @@ def write_to_excel(content, filename):
         ws['A%d' % (i + 2)].hyperlink = content[i]
         ws['A%d' % (i + 2)].style = "Hyperlink"
         ws['B%d' % (i + 2)] = content[i]
-    wb.save(filename)
+    if filename == '':
+        filename = 'default.xlsx'
+    if filename.endswith('.xlsx'):
+        abs_path = path + os.sep + filename
+    else:
+        abs_path = path + os.sep + filename + '.xlsx'
+    wb.save(abs_path)
+    return abs_path
 
 
 rc = read_config()
 files = get_all_files(rc.get('rootpath'), suffix=rc.get('suffix'))
-write_to_excel(files, rc.get('rootpath') + os.sep + rc.get('filename'))
+write_to_excel(files, rc.get('filename'), rc.get('rootpath'))
