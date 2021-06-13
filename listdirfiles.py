@@ -64,6 +64,6 @@ def write_to_excel(content, filename, path):
     return abs_path
 
 
-rc = read_config()
-files = get_all_files(rc.get('rootpath'), suffix=rc.get('suffix'))
-write_to_excel(files, rc.get('filename'), rc.get('rootpath'))
+# rc = read_config()
+# files = get_all_files(rc.get('rootpath'), suffix=rc.get('suffix'))
+# write_to_excel(files, rc.get('filename'), rc.get('rootpath'))
