@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLineEdit, QGridLayout, QLabel, QPushButton
-from PyQt5.QtGui import QIcon, QDesktopServices
-from PyQt5.QtCore import QUrl
+from PySide2.QtWidgets import QApplication, QWidget, QLineEdit, QGridLayout, QLabel, QPushButton
+from PySide2.QtGui import QIcon, QDesktopServices
+from PySide2.QtCore import QUrl
 import listdirfiles as ldf
 
 
